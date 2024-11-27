@@ -1,6 +1,6 @@
 # Including the Base image
 
-FROM openjdk:17
+FROM openjdk:21
 
 # Who is the Author (depricated) instead of LABEL
 
