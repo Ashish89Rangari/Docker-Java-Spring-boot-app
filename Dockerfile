@@ -1,6 +1,6 @@
 # Including the Base image
 
-FROM openjdk:21
+FROM openjdk:17
 
 # Who is the Author (depricated) instead of LABEL
 
@@ -18,11 +18,12 @@ COPY target/spring-boot-docker-app.jar /usr/app
 
 WORKDIR /usr/app
 
-# To expose conatainer port
+# To expose conatainer port (# Expose the port the app runs on)
 
 EXPOSE 8080
  
 # Entrypoint is nothing but act as CMD but in CMD can be overwrite and Entrypoint can't be 
 # executing jar file inside the container, so executing command jar file name
+# Command to run application
 
 ENTRYPOINT [ "java" , "jar" , "spring-boot-docker-app.jar"]
